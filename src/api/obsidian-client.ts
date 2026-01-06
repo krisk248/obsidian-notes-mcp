@@ -321,7 +321,7 @@ export class ObsidianClient {
     }
 
     // Sort by score (number of matches)
-    return results.sort((a, b) => b.score - a.score);
+    return results.sort((a, b) => (b.score ?? 0) - (a.score ?? 0));
   }
 
   /**

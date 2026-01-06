@@ -1,12 +1,12 @@
 {
-  "name": "obsidian-mcp",
+  "name": "obsidian-notes-mcp",
   "version": "1.0.0",
   "description": "The best MCP server for Obsidian - connect Claude Code and Claude Desktop to your notes with one-line setup",
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "bin": {
-    "obsidian-mcp": "dist/index.js"
+    "obsidian-notes-mcp": "dist/index.js"
   },
   "files": [
     "dist",
@@ -25,7 +25,7 @@
     "lint": "eslint src --ext .ts",
     "lint:fix": "eslint src --ext .ts --fix",
     "format": "prettier --write src/**/*.ts",
-    "prepublishOnly": "bun run build:tsc && bun test"
+    "prepublishOnly": "tsc"
   },
   "keywords": [
     "obsidian",
@@ -37,16 +37,16 @@
     "knowledge-management",
     "bun"
   ],
-  "author": "krisk248",
+  "author": "ph0n1x_08",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/krisk248/obsidian-mcp.git"
+    "url": "git+https://github.com/krisk248/obsidian-notes-mcp.git"
   },
   "bugs": {
-    "url": "https://github.com/krisk248/obsidian-mcp/issues"
+    "url": "https://github.com/krisk248/obsidian-notes-mcp/issues"
   },
-  "homepage": "https://github.com/krisk248/obsidian-mcp#readme",
+  "homepage": "https://github.com/krisk248/obsidian-notes-mcp#readme",
   "engines": {
     "node": ">=20.0.0"
   },

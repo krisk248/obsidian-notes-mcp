@@ -1,6 +1,6 @@
-# obsidian-mcp
+# obsidian-notes-mcp
 
-[![npm version](https://badge.fury.io/js/obsidian-mcp.svg)](https://www.npmjs.com/package/obsidian-mcp)
+[![npm version](https://badge.fury.io/js/obsidian-notes-mcp.svg)](https://www.npmjs.com/package/obsidian-notes-mcp)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 The **best MCP server for Obsidian**. Connect Claude Code and Claude Desktop to your notes with one-line setup.
@@ -36,7 +36,7 @@ The **best MCP server for Obsidian**. Connect Claude Code and Claude Desktop to 
 ### 2. Add to Claude Code (One Line!)
 
 ```bash
-claude mcp add obsidian-mcp -e OBSIDIAN_API_KEY=your_key_here
+claude mcp add obsidian-notes-mcp -e OBSIDIAN_API_KEY=your_key_here
 ```
 
 **Done!** Claude can now access your Obsidian vault.
@@ -54,7 +54,7 @@ Add to your Claude Desktop config:
   "mcpServers": {
     "obsidian": {
       "command": "npx",
-      "args": ["-y", "obsidian-mcp"],
+      "args": ["-y", "obsidian-notes-mcp"],
       "env": {
         "OBSIDIAN_API_KEY": "your_key_here"
       }

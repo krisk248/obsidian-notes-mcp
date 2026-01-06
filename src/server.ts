@@ -65,7 +65,7 @@ import {
 export function createServer(): Server {
   const server = new Server(
     {
-      name: 'obsidian-mcp',
+      name: 'obsidian-notes-mcp',
       version: '1.0.0',
     },
     {
