@@ -1,0 +1,66 @@
+{
+  "name": "obsidian-mcp",
+  "version": "1.0.0",
+  "description": "The best MCP server for Obsidian - connect Claude Code and Claude Desktop to your notes with one-line setup",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "obsidian-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "bun build src/index.ts --outdir dist --target node",
+    "build:tsc": "tsc",
+    "dev": "bun --watch src/index.ts",
+    "start": "bun dist/index.js",
+    "start:dev": "bun src/index.ts",
+    "test": "bun test",
+    "test:watch": "bun test --watch",
+    "test:coverage": "bun test --coverage",
+    "lint": "eslint src --ext .ts",
+    "lint:fix": "eslint src --ext .ts --fix",
+    "format": "prettier --write src/**/*.ts",
+    "prepublishOnly": "bun run build:tsc && bun test"
+  },
+  "keywords": [
+    "obsidian",
+    "mcp",
+    "model-context-protocol",
+    "claude",
+    "ai",
+    "notes",
+    "knowledge-management",
+    "bun"
+  ],
+  "author": "krisk248",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/krisk248/obsidian-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/krisk248/obsidian-mcp/issues"
+  },
+  "homepage": "https://github.com/krisk248/obsidian-mcp#readme",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "zod": "^3.24.0"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/node": "^22.10.0",
+    "typescript": "^5.7.0",
+    "eslint": "^9.17.0",
+    "@typescript-eslint/parser": "^8.18.0",
+    "@typescript-eslint/eslint-plugin": "^8.18.0",
+    "prettier": "^3.4.0"
+  }
+}
