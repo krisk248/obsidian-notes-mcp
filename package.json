@@ -1,6 +1,6 @@
 {
   "name": "obsidian-notes-mcp",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "The best MCP server for Obsidian - connect Claude Code and Claude Desktop to your notes with one-line setup",
   "type": "module",
   "main": "dist/index.js",
