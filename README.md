@@ -17,7 +17,7 @@ The **best MCP server for Obsidian**. Connect Claude Code and Claude Desktop to 
 
 ## Features
 
-- **One-line setup** - `claude mcp add obsidian-mcp -e OBSIDIAN_API_KEY=xxx`
+- **One-line setup** - Works with Claude Code and Claude Desktop
 - **18 powerful tools** - Full CRUD, search, periodic notes, batch operations
 - **Token-efficient** - Smart responses minimize token usage by 90%+
 - **Blazing fast** - Local search completes in < 1 second
@@ -36,8 +36,10 @@ The **best MCP server for Obsidian**. Connect Claude Code and Claude Desktop to 
 ### 2. Add to Claude Code (One Line!)
 
 ```bash
-claude mcp add obsidian -e OBSIDIAN_API_KEY=your_key_here -- npx -y obsidian-notes-mcp
+claude mcp add obsidian -e OBSIDIAN_API_KEY=your_key_here -e OBSIDIAN_REJECT_UNAUTHORIZED=false -- npx -y obsidian-notes-mcp
 ```
+
+> **Note:** The `OBSIDIAN_REJECT_UNAUTHORIZED=false` is required because Obsidian's Local REST API uses a self-signed HTTPS certificate.
 
 **Done!** Claude can now access your Obsidian vault.
 
@@ -56,7 +58,8 @@ Add to your Claude Desktop config:
       "command": "npx",
       "args": ["-y", "obsidian-notes-mcp"],
       "env": {
-        "OBSIDIAN_API_KEY": "your_key_here"
+        "OBSIDIAN_API_KEY": "your_key_here",
+        "OBSIDIAN_REJECT_UNAUTHORIZED": "false"
       }
     }
   }
@@ -225,10 +228,15 @@ bun run build
 2. Verify Local REST API plugin is enabled
 3. Check the API key is correct
 
-### "Self-signed certificate error"
+### "Self-signed certificate error" or "Unknown error"
 
-Set the environment variable:
+The Obsidian Local REST API uses HTTPS with a self-signed certificate. Make sure you included the environment variable in your setup:
+
 ```bash
+# For Claude Code
+claude mcp add obsidian -e OBSIDIAN_API_KEY=your_key -e OBSIDIAN_REJECT_UNAUTHORIZED=false -- npx -y obsidian-notes-mcp
+
+# Or set it manually
 OBSIDIAN_REJECT_UNAUTHORIZED=false
 ```
 

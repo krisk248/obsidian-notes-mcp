@@ -11,7 +11,7 @@ Type "# Add obsidian-notes-mcp to Claude Code"
 Enter
 Sleep 500ms
 
-Type "claude mcp add obsidian-notes-mcp -e OBSIDIAN_API_KEY=your_key"
+Type "claude mcp add obsidian -e OBSIDIAN_API_KEY=your_key -e OBSIDIAN_REJECT_UNAUTHORIZED=false -- npx -y obsidian-notes-mcp"
 Enter
 Sleep 2s
 

@@ -25,9 +25,9 @@ I wanted Claude to have access to my notes while coding. It's like giving Claude
 
 **Setup is one line:**
 ```bash
-claude mcp add obsidian -e OBSIDIAN_API_KEY=your_key -- npx -y obsidian-notes-mcp
+claude mcp add obsidian -e OBSIDIAN_API_KEY=your_key -e OBSIDIAN_REJECT_UNAUTHORIZED=false -- npx -y obsidian-notes-mcp
 ```
-(You need the Local REST API plugin in Obsidian first)
+(You need the Local REST API plugin in Obsidian first - the second env var handles its self-signed certificate)
 
 **Built with Claude Code:**
 I actually built this entire thing with help from Claude Code. It was a fun experience - Claude helped with the architecture, wrote tests, debugged issues, and even helped publish to npm.
