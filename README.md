@@ -36,7 +36,7 @@ The **best MCP server for Obsidian**. Connect Claude Code and Claude Desktop to 
 ### 2. Add to Claude Code (One Line!)
 
 ```bash
-claude mcp add obsidian-notes-mcp -e OBSIDIAN_API_KEY=your_key_here
+claude mcp add obsidian -e OBSIDIAN_API_KEY=your_key_here -- npx -y obsidian-notes-mcp
 ```
 
 **Done!** Claude can now access your Obsidian vault.
